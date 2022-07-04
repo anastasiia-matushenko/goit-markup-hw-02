@@ -11,6 +11,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: var(--page-text-size);
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
     background-color: var(--primary-white-color);
@@ -25,8 +26,22 @@ body {
     text-decoration: none; 
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /* button */
 .button {
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -47,12 +62,8 @@ body {
 .site-nav .link,
 .contacts .link {
     font-weight: 500;
-    font-size: var(--page-text-size);
     line-height: 1.14;
     letter-spacing: 0.02em;
-}
-
-.site-nav .link {
     color: var(--secondary-text-color);
 }
 
@@ -65,6 +76,10 @@ body {
 }
 
 /* hero */
+.hero {
+    background-color: var(--footer-bg-color);
+}
+
 .hero-title {
     font-weight: 900;
     font-size: 44px;
@@ -73,7 +88,6 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--primary-white-color);
-    background-color: var(--footer-bg-color);
 }
 
 .button-primary {
@@ -85,11 +99,8 @@ body {
 }
 
 /* features */
-.features {
-    font-size: var(--page-text-size);
-}
-
 .features .title {  
+    font-size: var(--page-text-size);
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--secondary-text-color);
@@ -110,7 +121,6 @@ body {
 /* team */
 .team {
     background-color: var(--secondary-bg-color);
-    line-height: 1.2;
 }
 
 .team-card {
@@ -120,7 +130,13 @@ body {
 .team-name {
     font-weight: 500;
     font-size: 16px;
+    line-height: 1.2;
     color: var(--secondary-text-color);
+}
+
+.team-position {
+    font-size: 16px;
+    line-height: 1.2;
 }
 
 /* footer */
@@ -134,7 +150,6 @@ body {
 
 .address {
     font-style: normal;
-    font-size: var(--page-text-size);
     line-height: 1.71;
 }
 
@@ -160,7 +175,8 @@ body {
 }
 
 .filter-button:hover,
-.filter-button:focus {
+.filter-button:focus,
+.filter-button.current {
     color: var(--primary-white-color);
     background-color: var(--accent-color);
 }
@@ -174,6 +190,7 @@ body {
 }
 
 .gallery .description {
+    font-size: 16px;
     line-height: 1.88;
     color: var(--primary-text-color);
 }
